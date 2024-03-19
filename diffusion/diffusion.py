@@ -22,7 +22,7 @@ from .module.utils.misc import groupwise
 from random import random
 from einops import reduce
 
-from pytorch_lightning import LightningModule
+from lightning import LightningModule
 
 from tqdm.auto import tqdm
 
@@ -72,6 +72,7 @@ class Diffusion(LightningModule):
         norm_backward : Optional[Callable] = None,
         data_key : str = 'smap',
         ctrl_key : Optional[str] = None,
+        **kwargs,
     ) -> None:
         super().__init__()
 

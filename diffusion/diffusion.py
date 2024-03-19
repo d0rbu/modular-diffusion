@@ -332,7 +332,7 @@ class Diffusion(LightningModule):
         return x_0, ctrl
 
     @torch.no_grad()
-    def validation_epoch_end(self, val_outs : Tuple[Tensor, ...]) -> None:
+    def on_validation_epoch_end(self, val_outs : Tuple[Tensor, ...]) -> None:
         '''
             At the end of the validation cycle, we inspect how the denoising
             procedure is doing by sampling novel images from the learn distribution.

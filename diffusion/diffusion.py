@@ -72,6 +72,7 @@ class Diffusion(LightningModule):
         norm_backward : Optional[Callable] = None,
         data_key : str = 'smap',
         ctrl_key : Optional[str] = None,
+        **kwargs,
     ) -> None:
         super().__init__()
 

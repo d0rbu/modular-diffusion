@@ -232,4 +232,4 @@ class EfficientAttention(nn.Module):
 
         attn = einsum(exp_qk, val, 'b h i j, b h j d -> b h i d')
 
-        return attn, exp_qk.sum(dim = -1), qk_max.squeeze()
+        return attn, exp_qk.sum(dim = -1), qk_max.squeeze(-1)
